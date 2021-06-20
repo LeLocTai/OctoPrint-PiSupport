@@ -20,11 +20,11 @@ In case you want to manually install it into an older version for whatever reaso
 [Plugin Manager](https://docs.octoprint.org/en/master/bundledplugins/pluginmanager.html)
 or manually using this URL:
 
-    https://github.com/OctoPrint/OctoPrint-PiSupport/archive/main.zip
+    https://github.com/LeLocTai/OctoPrint-PiSupport/archive/main.zip
 
 To install and/or rollback to a specific version `<version>`, either use this URL in the plugin manager:
 
-    https://github.com/OctoPrint/OctoPrint-PiSupport/archive/<version>.zip
+    https://github.com/LeLocTai/OctoPrint-PiSupport/archive/<version>.zip
 
 or run
 

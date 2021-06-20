@@ -361,7 +361,7 @@ class PiSupportPlugin(
                     }
                 ],
                 # update method: pip
-                pip="https://github.com/OctoPrint/OctoPrint-PiSupport/archive/{target_version}.zip",
+                pip="https://github.com/LeLocTai/OctoPrint-PiSupport/archive/{target_version}.zip",
             )
         )
 
