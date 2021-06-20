@@ -66,7 +66,7 @@ $(function () {
 
                 // Throttle state
                 self.fromThrottleState(response.throttle_state);
-                if (self.currentUndervoltage() || self.pastUndervoltage()) {
+                if (self.currentUndervoltage()) {
                     var warning = gettext(
                         "Your Raspberry Pi is reporting insuffient power. " +
                             "Switch to an adequate power supply or risk bad " +
