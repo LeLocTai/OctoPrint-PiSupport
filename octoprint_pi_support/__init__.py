@@ -48,7 +48,8 @@ if __LOCAL_DEBUG:
     import itertools
 
     _VCGENCMD_OUTPUT = itertools.chain(
-        iter(("0x0", "0x0", "0x50005", "0x50000", "0x70007")), itertools.repeat("0x70005")
+        iter(("0x0", "0x0", "0x50005", "0x50000", "0x70007")),
+        itertools.repeat("0x70005"),
     )
 
     _CHECK_INTERVAL_OK = 10
@@ -76,7 +77,8 @@ class ThrottleState(object):
             "throttled": _FLAG_THROTTLED & value == _FLAG_THROTTLED,
             "past_undervoltage": _FLAG_PAST_UNDERVOLTAGE & value
             == _FLAG_PAST_UNDERVOLTAGE,
-            "past_freq_capped": _FLAG_PAST_FREQ_CAPPED & value == _FLAG_PAST_FREQ_CAPPED,
+            "past_freq_capped": _FLAG_PAST_FREQ_CAPPED & value
+            == _FLAG_PAST_FREQ_CAPPED,
             "past_throttled": _FLAG_PAST_THROTTLED & value == _FLAG_PAST_THROTTLED,
             "raw_value": value,
         }
@@ -181,7 +183,9 @@ def get_proc_dt_model():
 
 def get_vcgencmd_throttled_state(command):
     if __LOCAL_DEBUG:
-        output = "throttled={}".format(next(_VCGENCMD_OUTPUT))  # mock for local debugging
+        output = "throttled={}".format(
+            next(_VCGENCMD_OUTPUT)
+        )  # mock for local debugging
     else:
         output = sarge.get_stdout(command, close_fds=CLOSE_FDS)
 
@@ -345,7 +349,7 @@ class PiSupportPlugin(
                 displayVersion=self._plugin_version,
                 # version check: github repository
                 type="github_release",
-                user="OctoPrint",
+                user="LeLocTai",
                 repo="OctoPrint-PiSupport",
                 current=self._plugin_version,
                 stable_branch={
